@@ -57,9 +57,9 @@ def get_gps_atom(gps_atom_info, f):
 
         # sanity:
         if atom_size != atom_size1 or atom_type != expected_type or magic != expected_magic:
-            print(
+            print((
             "Error! skipping atom at %x (expected size:%d, actual size:%d, expected type:%s, actual type:%s, expected magic:%s, actual maigc:%s)!" % (
-            int(atom_pos), atom_size, atom_size1, expected_type, atom_type, expected_magic, magic))
+            int(atom_pos), atom_size, atom_size1, expected_type, atom_type, expected_magic, magic)))
             return
 
         hour, minute, second, year, month, day, active, latitude_b, longitude_b, unknown2, latitude, longitude, speed = struct.unpack_from(
