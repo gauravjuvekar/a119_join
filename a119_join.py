@@ -19,9 +19,9 @@ class VideoFile:
     def __init__(self, mp4, folder):
         self.mp4fileonly = mp4
         self.mp4file = join(folder, mp4)
-        # first 16 chars in filename are the date and time 2016_1224_094105_116.MP4
-        self.date = datetime.strptime(mp4[:16], '%Y_%m%d_%H%M%S')
-        self.number = mp4[16:2]
+        # first 14 chars in filename are the date and time 20161224094105_116.MP4
+        self.date = datetime.strptime(mp4[:14], '%Y%m%d%H%M%S')
+        self.number = mp4[14:2]
         self.gpx = []
 
     def str_date(self):
